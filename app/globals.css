@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-abyss-950 text-slate-200 antialiased;
+  background-image:
+    radial-gradient(60% 50% at 15% 10%, rgba(47, 243, 214, 0.08), transparent 60%),
+    radial-gradient(50% 50% at 90% 20%, rgba(255, 79, 216, 0.08), transparent 60%),
+    radial-gradient(80% 80% at 50% 120%, rgba(29, 39, 72, 0.6), transparent 70%);
+  background-attachment: fixed;
+}
+
+/* Glass panels — the core surface language */
+.glass {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl;
+}
+.glass-strong {
+  @apply bg-white/[0.06] backdrop-blur-2xl border border-white/15 rounded-2xl;
+}
+
+.glow-text {
+  text-shadow: 0 0 24px rgba(47, 243, 214, 0.45);
+}
+
+.gene-chip {
+  @apply inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-[11px] font-medium;
+}
+
+/* Thin custom scrollbar for the log console */
+.log-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.log-scroll::-webkit-scrollbar-thumb {
+  background: rgba(47, 243, 214, 0.3);
+  border-radius: 999px;
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+@keyframes helixspin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}

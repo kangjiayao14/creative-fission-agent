@@ -1,0 +1,47 @@
+{
+  "name": "creative-fission-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "广告素材裂变 Agent — Creative Search Engine powered by Zhipu GLM",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kangjiayao14/creative-fission-agent.git"
+  },
+  "homepage": "https://github.com/kangjiayao14/creative-fission-agent#readme",
+  "bugs": {
+    "url": "https://github.com/kangjiayao14/creative-fission-agent/issues"
+  },
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "dev:clean": "rm -rf .next && next dev",
+    "serve": "bash start.sh",
+    "serve:clean": "bash start.sh --clean",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run build",
+    "gen:docs": "node scripts/gen-docs.mjs"
+  },
+  "dependencies": {
+    "framer-motion": "^11.3.0",
+    "next": "14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "docx": "^8.5.0",
+    "pdfkit": "^0.15.0",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3"
+  }
+}
